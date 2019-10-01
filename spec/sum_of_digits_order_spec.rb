@@ -10,6 +10,6 @@ describe '#sum_of_digits_order' do
   end
 
   it 'correctly handles an array of 9, 55, 105, 201' do
-    expect(sum_of_digits_order([9, 55, 105, 201])).to eq([201, 106, 9, 55])
+    expect(sum_of_digits_order([9, 55, 105, 201])).to eq([201, 105, 9, 55])
   end
 end
