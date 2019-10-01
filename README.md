@@ -1,4 +1,6 @@
-# weight_for_weight
+# 'Weight for Weight'
+My attempt at this codewars challenge: 
+https://www.codewars.com/kata/55c6126177c9441a570000cc
 
 ## Instructions
 My friend John and I are members of the "Fat to Fit Club (FFC)".
