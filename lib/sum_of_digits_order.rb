@@ -1,25 +1,17 @@
 def sum_of_digits_order(weights)
   weights_array_of_hashes = weights_array_of_hashes(weights)
-  sorted_array = weights_array_of_hashes.sort_by { |weight| [ weight[:sum_of_digits], weight[:weight] ] }
-  result = []
-  sorted_array.each do |weight_hash| 
-    result << weight_hash[:weight]
-  end
-  result.join(' ')
+  weights_array_of_hashes.sort_by! { |weight| [ weight[:sum_of_digits], weight[:weight] ] }
+  weights_array_of_hashes.map { |weight_hash| weight_hash[:weight] }.join(' ')
 end
 
 private
 
 def sum_of_digits(number)
-  sum_of_digits = number.split('').inject(0) { |sum, digit| sum + digit.to_i }
+  number.split('').inject(0) { |sum, digit| sum + digit.to_i }
 end
 
 def weights_array_of_hashes(weights)
-  weights_array_of_hashes = []
-  weights.split(' ').each do |weight|
-    weights_array_of_hashes << create_hash(weight)
-  end
-  weights_array_of_hashes
+  weights.split(' ').map { |weight| create_hash(weight) }
 end
 
 def create_hash(weight)
