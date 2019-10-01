@@ -1,5 +1,5 @@
 def sum_of_digits_order(weights)
-  weights.sort_by { |weight| sum_of_digits(weight)}
+  weights.split(' ').sort_by { |weight| sum_of_digits(weight.to_i)}.join(' ')
 end
 
 private
